@@ -10,6 +10,9 @@ export default function Nav() {
       <a href="/" className="nav-logo" aria-label="Firas Isa, Home">FIRAS ISA</a>
       
       <ul className={`nav-links ${isOpen ? 'is-open' : ''}`} role="list">
+        <li className="mobile-drawer-header">
+          <span className="nav-logo" aria-hidden="true">FIRAS ISA</span>
+        </li>
         <li><a href="/about" onClick={() => setIsOpen(false)}>About</a></li>
         <li><a href="/mission" onClick={() => setIsOpen(false)}>Mission</a></li>
         <li><a href="/crypto-dispensers" onClick={() => setIsOpen(false)}>Company</a></li>
@@ -22,7 +25,7 @@ export default function Nav() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Buy Bitcoin
+            Buy Bitcoin <span style={{ marginLeft: '6px' }}>→</span>
           </a>
         </li>
       </ul>
