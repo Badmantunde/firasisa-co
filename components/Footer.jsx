@@ -1,3 +1,16 @@
+const ExternalArrow = () => (
+  <svg
+    width="11"
+    height="11"
+    viewBox="0 0 11 11"
+    fill="none"
+    aria-hidden="true"
+    style={{ display: 'inline-block', verticalAlign: 'middle', marginLeft: '6px', flexShrink: 0 }}
+  >
+    <path d="M1.5 9.5L9.5 1.5M9.5 1.5H3.5M9.5 1.5V7.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+)
+
 export default function Footer() {
   return (
     <footer className="footer" aria-label="Site footer">
@@ -24,7 +37,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              LinkedIn ↗
+              LinkedIn<ExternalArrow />
             </a>
             <a
               href="https://www.cryptodispensers.com"
@@ -32,7 +45,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Crypto Dispensers ↗
+              Crypto Dispensers<ExternalArrow />
             </a>
             <a
               href="https://app.cryptodispensers.com/signup"
@@ -41,7 +54,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               style={{ color: 'var(--orange)' }}
             >
-              Buy Bitcoin Now ↗
+              Buy Bitcoin Now<ExternalArrow />
             </a>
           </div>
         </div>
