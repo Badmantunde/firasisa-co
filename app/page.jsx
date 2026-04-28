@@ -117,24 +117,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══ STATS BAR ══════════════════════════════════════════ */}
-      <div className="stats-bar" aria-label="Company metrics">
-        <dl className="stats-grid">
-          {[
-            { num: '2017', label: 'Year Founded' },
-            { num: '16K+', label: 'Retail Locations' },
-            { num: '1M+',  label: 'Users Globally' },
-            { num: '159',  label: 'Countries Served' },
-            { num: '4.9★', label: 'Trustpilot Rating' },
-          ].map(({ num, label }) => (
-            <div key={label} className="stat-item">
-              <dt className="stat-label">{label}</dt>
-              <dd className="stat-num">{num}</dd>
-            </div>
-          ))}
-        </dl>
-      </div>
-
       {/* ═══ TICKER ══════════════════════════════════════════════ */}
       <div className="ticker" aria-hidden="true">
         <div className="ticker-track">
