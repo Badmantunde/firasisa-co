@@ -153,24 +153,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* ── STATS ───────────────────────────────────────────── */}
-        <div className="stats-bar" aria-label="Founder metrics">
-          <dl className="stats-grid">
-            {[
-              { num: '2017', label: 'Founded' },
-              { num: '16K+', label: 'Retail Locations' },
-              { num: '1M+',  label: 'Users Globally' },
-              { num: '159',  label: 'Countries' },
-              { num: '4.9★', label: 'Trustpilot' },
-            ].map(({ num, label }) => (
-              <div key={label} className="stat-item">
-                <dt className="stat-label">{label}</dt>
-                <dd className="stat-num">{num}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-
         {/* ── CORE BELIEFS ────────────────────────────────────── */}
         <section className="page-section" style={{ background: 'var(--onyx)' }}>
           <div className="page-section-inner">

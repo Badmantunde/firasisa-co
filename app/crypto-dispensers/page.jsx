@@ -180,14 +180,23 @@ export default function CryptoDispensersPage() {
       <main className="page-wrapper">
 
         {/* ── PAGE HERO ───────────────────────────────────────── */}
-        <header className="page-hero">
-          <div className="page-hero-inner wrap">
-            <span className="page-eyebrow">The Company</span>
-            <h1 className="page-title">CRYPTO<br />DISPENSERS</h1>
-            <p className="page-subtitle">
-              Making Bitcoin accessible to everyone , <br />
-              cash, card, or bank transfer.
-            </p>
+        <header className="page-hero cd-hero">
+          <div className="page-hero-inner wrap cd-hero-inner">
+            <div className="cd-hero-logo" aria-hidden="true">
+              <img
+                src="/image/cd-lol.png"
+                alt="Crypto Dispensers logo"
+                style={{ width: '100%', height: '100%', objectFit: 'contain', objectPosition: 'center' }}
+              />
+            </div>
+            <div className="cd-hero-text">
+              <span className="page-eyebrow">The Company</span>
+              <h1 className="page-title">CRYPTO<br />DISPENSERS</h1>
+              <p className="page-subtitle">
+                Making Bitcoin accessible to everyone.<br />
+                cash, card, or bank transfer.
+              </p>
+            </div>
           </div>
         </header>
 
