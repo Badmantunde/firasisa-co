@@ -213,8 +213,10 @@ a:hover { opacity: 0.6; }
 .nav-toggle.is-active span:nth-child(2) { opacity: 0; }
 .nav-toggle.is-active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
-.mobile-cta { display: none; }
-.mobile-drawer-header { display: none; }
+/* ── MOBILE DRAWER (sibling of nav, outside backdrop-filter context) ── */
+.mobile-drawer {
+  display: none;
+}
 
 @media (max-width: 768px) {
   .nav { padding: 18px var(--pad); }
@@ -223,69 +225,74 @@ a:hover { opacity: 0.6; }
 
   .desktop-only { display: none; }
 
-  /* full-screen drawer */
-  .nav-links {
+  /* hide desktop nav links on mobile */
+  .desktop-nav { display: none !important; }
+
+  /* drawer */
+  .mobile-drawer {
+    display: flex;
+    flex-direction: column;
     position: fixed;
     inset: 0;
     background: var(--onyx);
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 0;
+    z-index: 190;
     padding: 0 var(--pad) clamp(32px, 6vh, 56px);
     transform: translateX(100%);
     transition: transform 0.45s cubic-bezier(0.23, 1, 0.32, 1);
-    z-index: 205;
     overflow-y: auto;
   }
 
-  .nav-links.is-open { transform: translateX(0); }
+  .mobile-drawer.is-open {
+    transform: translateX(0);
+  }
 
-  /* drawer header row — logo + implicit close target */
+  /* header row with logo */
   .mobile-drawer-header {
     display: flex;
     align-items: center;
-    width: 100%;
-    padding: 22px 0 clamp(32px, 5vh, 52px);
+    padding: 22px 0 clamp(28px, 4vh, 44px);
     border-bottom: 1px solid var(--rule-dark);
-    margin-bottom: clamp(28px, 4vh, 44px);
+    margin-bottom: clamp(24px, 4vh, 40px);
   }
 
-  /* nav items */
-  .nav-links > li:not(.mobile-drawer-header):not(.mobile-cta) {
-    width: 100%;
+  /* link list */
+  .mobile-drawer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .mobile-drawer-links li {
     border-bottom: 1px solid var(--rule-dark);
   }
 
-  .nav-links > li:not(.mobile-drawer-header):not(.mobile-cta) a {
+  .mobile-drawer-links a {
     display: block;
-    width: 100%;
     font-family: var(--f-hel);
-    font-size: clamp(28px, 8vw, 42px);
+    font-size: clamp(30px, 9vw, 44px);
     font-weight: 700;
     letter-spacing: -0.02em;
     text-transform: uppercase;
     color: var(--white);
     padding: clamp(14px, 2.5vh, 22px) 0;
-    transition: color 0.2s, padding-left 0.2s;
     line-height: 1;
+    transition: color 0.2s ease, padding-left 0.2s ease;
   }
 
-  .nav-links > li:not(.mobile-drawer-header):not(.mobile-cta) a:hover {
+  .mobile-drawer-links a:hover {
     color: var(--orange);
-    padding-left: 8px;
+    padding-left: 10px;
     opacity: 1;
   }
 
-  /* CTA at bottom */
-  .mobile-cta {
-    display: block;
+  /* CTA pinned to bottom */
+  .mobile-drawer-cta {
     margin-top: auto;
     padding-top: clamp(32px, 5vh, 52px);
-    width: 100%;
   }
 
-  .mobile-cta .nav-cta {
+  .mobile-drawer-cta .nav-cta {
     display: block;
     width: 100%;
     text-align: center;
