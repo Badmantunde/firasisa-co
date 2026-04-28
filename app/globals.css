@@ -144,10 +144,12 @@ a:hover { opacity: 0.6; }
 
 .nav-logo {
   font-family: var(--f-hel);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   color: var(--white);
+  white-space: nowrap;
 }
 
 .nav-links {
@@ -167,6 +169,12 @@ a:hover { opacity: 0.6; }
 
 .nav-links a:hover { color: var(--white); opacity: 1; }
 
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .nav-cta {
   font-family: var(--f-hel);
   font-size: 10px;
@@ -176,10 +184,68 @@ a:hover { opacity: 0.6; }
   background: var(--orange);
   color: var(--onyx);
   padding: 10px 20px;
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.2s;
 }
 
 .nav-cta:hover { background: #e8851a; opacity: 1; }
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: none;
+  border: none;
+  padding: 0;
+  z-index: 210;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--white);
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.nav-toggle.is-active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.nav-toggle.is-active span:nth-child(2) { opacity: 0; }
+.nav-toggle.is-active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+.mobile-cta { display: none; }
+
+@media (max-width: 768px) {
+  .nav { padding: 18px var(--pad); }
+  
+  .nav-toggle { display: flex; }
+  
+  .desktop-only { display: none; }
+  
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: var(--onyx);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    transform: translateX(100%);
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: 205;
+  }
+  
+  .nav-links.is-open { transform: translateX(0); }
+  
+  .nav-links a { font-size: 24px; font-weight: 700; }
+  
+  .mobile-cta { display: block; margin-top: 20px; }
+  .mobile-cta .nav-cta { padding: 16px 40px; font-size: 14px; }
+}
+
 
 /* ── HERO ────────────────────────────────────────────────── */
 .hero {
@@ -830,7 +896,6 @@ a:hover { opacity: 0.6; }
 }
 
 @media (max-width: 768px) {
-  .nav-links, .nav-cta { display: none; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px 0; }
   .stat-item { padding: 0 16px; }
   .about-grid { grid-template-columns: 1fr; }
@@ -1524,3 +1589,535 @@ a:hover { opacity: 0.6; }
   .posts-grid { grid-template-columns: 1fr !important; }
   .article-back { margin-bottom: 8px; }
 }
+
+/* ══════════════════════════════════════════════════════════
+   MICRO-INTERACTIONS & ANIMATIONS
+   ══════════════════════════════════════════════════════════ */
+
+/* ── SCROLL REVEAL ───────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.72s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 0.72s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: opacity, transform;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slight scale variant for cards */
+.service-card.reveal,
+.post-card.reveal,
+.post-card-featured.reveal,
+.product-row.reveal,
+.belief-item.reveal,
+.faq-item.reveal,
+.timeline-row.reveal {
+  transform: translateY(20px) scale(0.99);
+}
+
+.service-card.reveal.revealed,
+.post-card.reveal.revealed,
+.post-card-featured.reveal.revealed,
+.product-row.reveal.revealed,
+.belief-item.reveal.revealed,
+.faq-item.reveal.revealed,
+.timeline-row.reveal.revealed {
+  transform: translateY(0) scale(1);
+}
+
+/* ── HERO NAME LETTER STAGGER ────────────────────────────── */
+.hero-letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(0.15em) skewX(-3deg);
+  animation: letter-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes letter-in {
+  to {
+    opacity: 1;
+    transform: translateY(0) skewX(0deg);
+  }
+}
+
+/* ── HERO SCROLL INDICATOR ───────────────────────────────── */
+.hero-scroll-line {
+  animation: scroll-pulse 2.2s ease-in-out infinite;
+}
+
+@keyframes scroll-pulse {
+  0%, 100% { opacity: 0.4; transform: scaleY(1); }
+  50%       { opacity: 1;   transform: scaleY(1.15); }
+}
+
+.hero-scroll {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.hero-scroll--hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ── NAVBAR SCROLL BEHAVIOR ──────────────────────────────── */
+.nav {
+  transition: padding 0.35s ease, background 0.35s ease, transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.nav--scrolled {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background: rgba(10, 10, 10, 0.92);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.nav--hidden {
+  transform: translateY(-100%);
+}
+
+/* Logo subtle hover pulse */
+.nav-logo {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.2s;
+}
+
+.nav-logo:hover {
+  transform: scale(1.06);
+  opacity: 1;
+  color: var(--orange);
+}
+
+/* Nav link underline draw */
+.nav-links a {
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--orange);
+  transition: width 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+}
+
+/* ── CTA ARROW ENHANCED ──────────────────────────────────── */
+.cta-arrow {
+  display: inline-block;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.cta:hover .cta-arrow {
+  transform: translateX(7px);
+}
+
+/* ── SERVICE CARD HOVER ──────────────────────────────────── */
+.service-card {
+  transition: background 0.25s ease, transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--orange);
+  transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.service-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+.service-card:hover::before {
+  width: 100%;
+}
+
+/* ── POST CARD HOVER ─────────────────────────────────────── */
+.post-card,
+.post-card-featured {
+  transition: background 0.25s ease, transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+}
+
+.post-card:hover,
+.post-card-featured:hover {
+  transform: translateY(-2px);
+}
+
+.post-tag {
+  transition: letter-spacing 0.25s ease;
+}
+
+.post-card:hover .post-tag {
+  letter-spacing: 0.2em;
+}
+
+/* ── BADGE HOVER ─────────────────────────────────────────── */
+.badge {
+  transition: border-color 0.25s ease, color 0.25s ease, transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.badge:hover {
+  border-color: var(--orange);
+  color: var(--orange);
+  transform: translateY(-1px);
+}
+
+.store-tag {
+  transition: border-color 0.25s ease, color 0.25s ease, transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.store-tag:hover {
+  border-color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.9);
+  transform: translateY(-1px);
+}
+
+/* ── FOOTER LINK HOVER ───────────────────────────────────── */
+.footer-link {
+  position: relative;
+  display: inline-block;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.footer-link:hover {
+  transform: translateX(6px);
+  opacity: 1;
+}
+
+/* ── ABOUT QUOTE BORDER DRAW ─────────────────────────────── */
+.about-quote--animate {
+  border-left: 2px solid transparent;
+  position: relative;
+}
+
+.about-quote--animate::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -2px;
+  width: 2px;
+  height: 0;
+  background: var(--orange);
+  transition: height 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.about-quote--animate.about-quote--visible::before {
+  height: 100%;
+}
+
+/* ── STAT ITEM HOVER ─────────────────────────────────────── */
+.stat-item {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.stat-item:hover {
+  transform: translateY(-3px);
+}
+
+.stat-num {
+  transition: color 0.25s ease;
+}
+
+.stat-item:hover .stat-num {
+  color: var(--orange) !important;
+}
+
+/* ── TIMELINE ROW HOVER ──────────────────────────────────── */
+.timeline-row {
+  transition: background 0.2s ease, padding-left 0.3s ease;
+}
+
+.timeline-row:hover {
+  background: rgba(247, 147, 26, 0.03);
+  padding-left: 16px;
+}
+
+/* ── PRODUCT ROW HOVER ───────────────────────────────────── */
+.product-row {
+  transition: background 0.2s ease, padding-left 0.3s ease;
+}
+
+.product-row:hover {
+  background: rgba(255, 255, 255, 0.02);
+  padding-left: 12px;
+}
+
+/* ── FAQ ITEM HOVER ──────────────────────────────────────── */
+.faq-item {
+  transition: background 0.2s ease;
+  position: relative;
+}
+
+.faq-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 0;
+  height: 1px;
+  background: var(--orange);
+  transition: width 0.4s ease;
+}
+
+.faq-item:hover::after {
+  width: 100%;
+}
+
+/* ── BELIEF ITEM HOVER ───────────────────────────────────── */
+.belief-item {
+  transition: background 0.2s ease, padding-left 0.3s ease;
+}
+
+.belief-item:hover {
+  background: rgba(247, 147, 26, 0.03);
+  padding-left: 12px;
+}
+
+/* ── TICKER ──────────────────────────────────────────────── */
+.ticker {
+  cursor: default;
+}
+
+.ticker-item {
+  transition: color 0.2s ease;
+}
+
+.ticker:hover .ticker-item {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.ticker:hover .ticker-item:hover {
+  color: var(--onyx);
+}
+
+/* ── BITCOINPOP WORDMARK ─────────────────────────────────── */
+.bitcoinpop-wordmark {
+  transition: letter-spacing 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.bitcoinpop-wordmark:hover {
+  letter-spacing: -0.02em;
+}
+
+/* ── SUBMIT BUTTON ───────────────────────────────────────── */
+.btn-submit {
+  position: relative;
+  overflow: hidden;
+  transition: background 0.25s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+
+.btn-submit:hover {
+  background: #e8851a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(247, 147, 26, 0.35);
+}
+
+.btn-submit:active {
+  transform: translateY(0);
+}
+
+/* NAV CTA */
+.nav-cta {
+  position: relative;
+  overflow: hidden;
+  transition: background 0.25s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.nav-cta:hover {
+  transform: translateY(-1px);
+}
+
+/* ── RIPPLE EFFECT ───────────────────────────────────────── */
+.ripple-effect {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  transform: translate(-50%, -50%) scale(0);
+  animation: ripple-expand 0.6s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes ripple-expand {
+  to {
+    transform: translate(-50%, -50%) scale(80);
+    opacity: 0;
+  }
+}
+
+/* ── CUSTOM CURSOR GLOW ──────────────────────────────────── */
+.cursor-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(247, 147, 26, 0.45) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: screen;
+  transition: width 0.25s ease, height 0.25s ease, background 0.25s ease;
+  will-change: left, top;
+}
+
+.cursor-glow--hover {
+  width: 52px;
+  height: 52px;
+  background: radial-gradient(circle, rgba(247, 147, 26, 0.22) 0%, transparent 70%);
+}
+
+@media (pointer: coarse) {
+  .cursor-glow { display: none; }
+}
+
+/* ── FORM FIELD FOCUS SHIMMER ────────────────────────────── */
+.form-field input,
+.form-field textarea,
+.form-field select {
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(247, 147, 26, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* ── ABOUT PHOTO HOVER ───────────────────────────────────── */
+.about-photo {
+  overflow: hidden;
+  transition: box-shadow 0.35s ease;
+}
+
+.about-photo img {
+  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.4s ease;
+  filter: saturate(0.9);
+}
+
+.about-photo:hover img {
+  transform: scale(1.04);
+  filter: saturate(1);
+}
+
+.about-photo:hover {
+  box-shadow: 0 24px 80px rgba(247, 147, 26, 0.12);
+}
+
+/* ── HERO BG PARALLAX CLIP ───────────────────────────────── */
+.hero-bg {
+  will-change: transform;
+  transform-origin: center top;
+}
+
+/* ── HERO META STAGGER ───────────────────────────────────── */
+.hero-meta-line {
+  opacity: 0;
+  animation: fade-up 0.6s ease forwards;
+}
+
+.hero-meta-line:nth-child(1) { animation-delay: 0.2s; }
+.hero-meta-line:nth-child(2) { animation-delay: 0.35s; }
+.hero-meta-line:nth-child(3) { animation-delay: 0.5s; }
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── HERO TAGLINE FADE IN ────────────────────────────────── */
+.hero-tagline {
+  opacity: 0;
+  animation: fade-in 0.9s ease 0.8s forwards;
+}
+
+@keyframes fade-in {
+  to { opacity: 1; }
+}
+
+/* Existing hero-tagline color still applies after animation */
+.hero-tagline { color: rgba(255, 255, 255, 0.55); }
+
+/* ── HERO SCROLL FADE IN ─────────────────────────────────── */
+.hero-scroll {
+  opacity: 0;
+  animation: fade-in 0.9s ease 1.2s forwards;
+}
+
+/* ── PAGE HERO GLOW PULSE ────────────────────────────────── */
+.page-hero::before {
+  animation: glow-pulse 5s ease-in-out infinite alternate;
+}
+
+@keyframes glow-pulse {
+  from { opacity: 0.7; }
+  to   { opacity: 1.4; }
+}
+
+/* ── SECTION EYEBROW LINE DRAW ───────────────────────────── */
+.section-eyebrow .rule,
+.about-header .rule {
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s;
+}
+
+.revealed + * .section-eyebrow .rule,
+.about-header.revealed .rule {
+  transform: scaleX(1);
+}
+
+/* Target via parent reveal */
+.about-header.revealed .rule {
+  transform: scaleX(1);
+}
+
+/* ── MISSION BITCOIN SYMBOL ──────────────────────────────── */
+.mission::before {
+  animation: btc-float 8s ease-in-out infinite;
+}
+
+@keyframes btc-float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-20px); }
+}
+
+/* ── REDUCED MOTION ──────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .hero-letter { opacity: 1 !important; transform: none !important; animation: none !important; }
+  .hero-meta-line, .hero-tagline, .hero-scroll { opacity: 1 !important; animation: none !important; }
+  .cursor-glow { display: none !important; }
+  .service-card:hover, .post-card:hover, .stat-item:hover,
+  .footer-link:hover, .about-photo img { transform: none !important; }
+  .mission::before { animation: none !important; }
+  .page-hero::before { animation: none !important; }
+  .hero-scroll-line { animation: none !important; }
+}
+

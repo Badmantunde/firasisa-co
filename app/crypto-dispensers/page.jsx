@@ -4,7 +4,7 @@ import Footer from '@/components/Footer'
 export const metadata = {
   title: 'Crypto Dispensers | Buy Bitcoin with Cash, Card & More | Firas Isa\'s Company',
   description:
-    'Crypto Dispensers — founded by Firas Isa in 2017 — lets you buy Bitcoin at 16,000+ retail stores with cash, or online with debit, credit, ACH, or wire. FinCEN registered. SOC 2 certified.',
+    'Crypto Dispensers, founded by Firas Isa in 2017, lets you buy Bitcoin at 16,000+ retail stores with cash, or online with debit, credit, ACH, or wire. FinCEN registered. SOC 2 certified.',
   alternates: { canonical: 'https://firasisa.com/crypto-dispensers' },
 }
 
@@ -33,7 +33,7 @@ const faqSchema = {
       name: 'How does BitcoinPOP work?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'BitcoinPOP (Point of Payment) lets you deposit cash at a participating retail store — such as CVS, Rite Aid, or Casey\'s — and receive Bitcoin directly to your Crypto Dispensers wallet. No bank account or ATM required. Create an account at cryptodispensers.com, generate a payment barcode, and pay cash at the counter.',
+        text: 'BitcoinPOP (Point of Payment) lets you deposit cash at a participating retail store, such as CVS, Rite Aid, or Casey\'s, and receive Bitcoin directly to your Crypto Dispensers wallet. No bank account or ATM required. Create an account at cryptodispensers.com, generate a payment barcode, and pay cash at the counter.',
       },
     },
     {
@@ -41,7 +41,7 @@ const faqSchema = {
       name: 'Where can I buy Bitcoin with cash?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'You can buy Bitcoin with cash at 16,000+ retail locations across the United States through Crypto Dispensers\' BitcoinPOP service — including CVS Pharmacy, Rite Aid, Casey\'s General Store, Office Depot, Winn-Dixie, Love\'s Travel Stops, Tops Markets, Giant Martin\'s, and Harveys Supermarket.',
+        text: 'You can buy Bitcoin with cash at 16,000+ retail locations across the United States through Crypto Dispensers\' BitcoinPOP service, including CVS Pharmacy, Rite Aid, Casey\'s General Store, Office Depot, Winn-Dixie, Love\'s Travel Stops, Tops Markets, Giant Martin\'s, and Harveys Supermarket.',
       },
     },
     {
@@ -57,7 +57,7 @@ const faqSchema = {
       name: 'How do I buy Bitcoin at CVS using Crypto Dispensers?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: '1. Create a free account at cryptodispensers.com. 2. Select BitcoinPOP and enter your Bitcoin purchase amount. 3. Generate a payment barcode. 4. Bring the barcode and cash to any participating CVS Pharmacy. 5. Pay at the register — Bitcoin is delivered to your account instantly.',
+        text: '1. Create a free account at cryptodispensers.com. 2. Select BitcoinPOP and enter your Bitcoin purchase amount. 3. Generate a payment barcode. 4. Bring the barcode and cash to any participating CVS Pharmacy. 5. Pay at the register, Bitcoin is delivered to your account instantly.',
       },
     },
     {
@@ -76,7 +76,7 @@ const PRODUCTS = [
     num: '01',
     name: 'BitcoinPOP™',
     tag: 'Flagship Innovation',
-    desc: 'Point of Payment — the most direct route from cash to Bitcoin ever built. Walk into any participating retail store, deposit cash at the register, and receive Bitcoin to your wallet. No bank account, no ATM, no friction. Available at 16,000+ locations nationwide including CVS Pharmacy, Rite Aid, Casey\'s General Store, Office Depot, Winn-Dixie, and more.',
+    desc: 'Point of Payment, the most direct route from cash to Bitcoin ever built. Walk into any participating retail store, deposit cash at the register, and receive Bitcoin to your wallet. No bank account, no ATM, no friction. Available at 16,000+ locations nationwide including CVS Pharmacy, Rite Aid, Casey\'s General Store, Office Depot, Winn-Dixie, and more.',
     href: 'https://www.cryptodispensers.com/bitcoinpop',
     label: 'Buy Bitcoin with cash',
     keywords: 'How to buy Bitcoin without a bank account · Buy Bitcoin at CVS · Cash to Bitcoin near me',
@@ -103,7 +103,7 @@ const PRODUCTS = [
     num: '04',
     name: 'ACH Bank Transfer',
     tag: null,
-    desc: 'Link a bank account and buy Bitcoin directly via ACH — lower fees and larger transaction limits make this ideal for regular buyers and those building a Bitcoin savings practice over time.',
+    desc: 'Link a bank account and buy Bitcoin directly via ACH, lower fees and larger transaction limits make this ideal for regular buyers and those building a Bitcoin savings practice over time.',
     href: 'https://www.cryptodispensers.com/ach-transfer',
     label: 'Buy via bank transfer',
     keywords: 'Buy Bitcoin ACH · Bitcoin bank transfer · Bitcoin direct deposit',
@@ -112,7 +112,7 @@ const PRODUCTS = [
     num: '05',
     name: 'Wire Transfer',
     tag: null,
-    desc: 'For high-volume Bitcoin purchases, Crypto Dispensers supports wire transfers — enabling large, institutional-scale transactions through a straightforward consumer interface.',
+    desc: 'For high-volume Bitcoin purchases, Crypto Dispensers supports wire transfers, enabling large, institutional-scale transactions through a straightforward consumer interface.',
     href: 'https://www.cryptodispensers.com/wire-transfers',
     label: 'Large Bitcoin purchase',
     keywords: 'Buy Bitcoin wire transfer · Large Bitcoin order · High volume crypto purchase',
@@ -121,7 +121,7 @@ const PRODUCTS = [
     num: '06',
     name: 'Global Exchange',
     tag: '159 Countries',
-    desc: 'Through strategic integrations with Paybis, Transak, and Cybrid, Crypto Dispensers operates as a unified global digital asset exchange — supporting seamless fiat-to-crypto conversions for users in 159 countries worldwide.',
+    desc: 'Through strategic integrations with Paybis, Transak, and Cybrid, Crypto Dispensers operates as a unified global digital asset exchange, supporting seamless fiat-to-crypto conversions for users in 159 countries worldwide.',
     href: 'https://www.cryptodispensers.com',
     label: 'Explore global access',
     keywords: 'International Bitcoin purchase · Global crypto exchange · Buy Bitcoin internationally',
@@ -131,7 +131,7 @@ const PRODUCTS = [
 const TIMELINE = [
   { year: '2017', event: 'Founded. First Bitcoin ATM at Woodfield Mall, Schaumburg, IL' },
   { year: '2018–19', event: 'Bitcoin ATM network expanded across Simon, Brookfield, and Tanger Properties' },
-  { year: '2020', event: 'Launched BitcoinPOP™ — 16,000+ retail cash-to-Bitcoin access points' },
+  { year: '2020', event: 'Launched BitcoinPOP™, 16,000+ retail cash-to-Bitcoin access points' },
   { year: '2021', event: 'Launched web platform. Integrated Paybis, Transak, and Cybrid for multi-method access' },
   { year: '2022–23', event: 'Surpassed 1 million registered users globally' },
   { year: '2024', event: 'Converted LLC to C-Corp. Announced $5M Series A at $25M valuation' },
@@ -141,7 +141,7 @@ const TIMELINE = [
 const FAQS = [
   {
     q: 'What is Crypto Dispensers?',
-    a: 'Crypto Dispensers is a fintech platform that makes buying Bitcoin and cryptocurrency simple and accessible — whether you\'re using cash at a retail store, a debit card online, or a bank transfer. Founded in 2017 by Firas Isa in Chicago, it now serves over 1 million users across 159 countries.',
+    a: 'Crypto Dispensers is a fintech platform that makes buying Bitcoin and cryptocurrency simple and accessible, whether you\'re using cash at a retail store, a debit card online, or a bank transfer. Founded in 2017 by Firas Isa in Chicago, it now serves over 1 million users across 159 countries.',
   },
   {
     q: 'Is Crypto Dispensers safe and legitimate?',
@@ -149,7 +149,7 @@ const FAQS = [
   },
   {
     q: 'How does BitcoinPOP work?',
-    a: 'Create a free account at cryptodispensers.com. Select BitcoinPOP, enter your purchase amount, and generate a payment barcode. Bring the barcode and your cash to any participating store — CVS, Rite Aid, Casey\'s, and more. Pay at the register. Bitcoin lands in your account instantly.',
+    a: 'Create a free account at cryptodispensers.com. Select BitcoinPOP, enter your purchase amount, and generate a payment barcode. Bring the barcode and your cash to any participating store, CVS, Rite Aid, Casey\'s, and more. Pay at the register. Bitcoin lands in your account instantly.',
   },
   {
     q: 'Where can I buy Bitcoin with cash near me?',
@@ -157,7 +157,7 @@ const FAQS = [
   },
   {
     q: 'Do I need a bank account to buy Bitcoin?',
-    a: 'No. BitcoinPOP and Bitcoin ATMs both allow you to buy Bitcoin with cash only — no bank account, no credit card, no ID beyond what\'s required by compliance regulations. This is the core of Crypto Dispensers\' mission.',
+    a: 'No. BitcoinPOP and Bitcoin ATMs both allow you to buy Bitcoin with cash only, no bank account, no credit card, no ID beyond what\'s required by compliance regulations. This is the core of Crypto Dispensers\' mission.',
   },
   {
     q: 'Does Crypto Dispensers charge fees?',
@@ -185,7 +185,7 @@ export default function CryptoDispensersPage() {
             <span className="page-eyebrow">The Company</span>
             <h1 className="page-title">CRYPTO<br />DISPENSERS</h1>
             <p className="page-subtitle">
-              Making Bitcoin accessible to everyone —<br />
+              Making Bitcoin accessible to everyone , <br />
               cash, card, or bank transfer.
             </p>
           </div>
@@ -228,7 +228,7 @@ export default function CryptoDispensersPage() {
                   The company's flagship product, BitcoinPOP™, solved a problem no one else was addressing: how do 60 million unbanked and cash-based Americans buy Bitcoin? The answer was to bring Bitcoin access to the retail stores where those Americans already shop.
                 </p>
                 <p className="t-body">
-                  Today, Crypto Dispensers operates across six payment rails — cash, ATM, debit, credit, ACH, and wire — making it one of the most accessible Bitcoin platforms in the United States.
+                  Today, Crypto Dispensers operates across six payment rails, cash, ATM, debit, credit, ACH, and wire, making it one of the most accessible Bitcoin platforms in the United States.
                 </p>
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>

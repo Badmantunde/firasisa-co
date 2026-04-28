@@ -4,7 +4,7 @@ import Footer from '@/components/Footer'
 export const metadata = {
   title: 'Contact Firas Isa | Founder, Crypto Dispensers | Chicago',
   description:
-    'Connect with Firas Isa — founder and CEO of Crypto Dispensers. For speaking inquiries, media, partnerships, or general questions.',
+    'Connect with Firas Isa, founder and CEO of Crypto Dispensers. For speaking inquiries, media, partnerships, or general questions.',
   alternates: { canonical: 'https://firasisa.com/contact' },
 }
 
@@ -192,7 +192,7 @@ export default function ContactPage() {
                   FIRAS ISA<br />SPEAKS ON<br />WHAT HE<br />HAS BUILT.
                 </h2>
                 <p className="t-body on-light">
-                  Not theory. Not predictions. Firas brings a decade of execution to the stage — from a single Bitcoin ATM to 16,000 retail locations to a million users. He speaks about the problems he built for, the innovations that came from them, and where the industry is going next.
+                  Not theory. Not predictions. Firas brings a decade of execution to the stage, from a single Bitcoin ATM to 16,000 retail locations to a million users. He speaks about the problems he built for, the innovations that came from them, and where the industry is going next.
                 </p>
               </div>
 

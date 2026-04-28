@@ -12,12 +12,12 @@ const PROBLEMS = [
   {
     stat: '~60M',
     label: 'Unbanked or underbanked Americans',
-    desc: 'Nearly one in four American adults is unbanked or relies on alternative financial services. They pay more for everything — check cashing, money orders, wire transfers — simply for not having a traditional bank account.',
+    desc: 'Nearly one in four American adults is unbanked or relies on alternative financial services. They pay more for everything, check cashing, money orders, wire transfers, simply for not having a traditional bank account.',
   },
   {
     stat: '8–10%',
     label: 'Real inflation rate felt by working households',
-    desc: 'Official inflation numbers don\'t capture what working households actually feel. Food, rent, gas, childcare — the essentials inflate faster than wages, eroding savings that took years to build.',
+    desc: 'Official inflation numbers don\'t capture what working households actually feel. Food, rent, gas, childcare, the essentials inflate faster than wages, eroding savings that took years to build.',
   },
   {
     stat: '$35+',
@@ -27,7 +27,7 @@ const PROBLEMS = [
   {
     stat: '0',
     label: 'Dollar amount of savings passed to next generation for most American families',
-    desc: 'Generational wealth transfer is concentrated at the top. For most working families, there is nothing to pass on — no assets, no equity, no inheritance. Bitcoin is an attempt to change that.',
+    desc: 'Generational wealth transfer is concentrated at the top. For most working families, there is nothing to pass on, no assets, no equity, no inheritance. Bitcoin is an attempt to change that.',
   },
 ]
 
@@ -76,7 +76,7 @@ export default function MissionPage() {
               </h2>
               <div>
                 <p className="t-body" style={{ marginBottom: '24px' }}>
-                  The American financial system creates winners and losers — not by accident, but by design. The people with the most assets get the best rates, the lowest fees, and the most options. The people with the least get charged the most for everything.
+                  The American financial system creates winners and losers, not by accident, but by design. The people with the most assets get the best rates, the lowest fees, and the most options. The people with the least get charged the most for everything.
                 </p>
                 <p className="t-body">
                   Inflation punishes people who hold dollars. Banking fees punish people with low balances. Credit systems exclude people without credit history. And the wealth gap compounds, year after year, for everyone on the wrong side of those rules.
@@ -165,7 +165,7 @@ export default function MissionPage() {
                     marginBottom: '24px',
                   }}
                 >
-                  Bitcoin isn't speculation. It's a savings technology — one that can't be inflated away, can't be confiscated by a bank, and doesn't require anyone's permission to hold. It is, in the most literal sense, a tool for financial sovereignty.
+                  Bitcoin isn't speculation. It's a savings technology, one that can't be inflated away, can't be confiscated by a bank, and doesn't require anyone's permission to hold. It is, in the most literal sense, a tool for financial sovereignty.
                 </p>
                 <p
                   style={{
@@ -218,13 +218,13 @@ export default function MissionPage() {
               </h2>
               <div>
                 <p className="t-body on-light" style={{ marginBottom: '24px' }}>
-                  Crypto Dispensers is the retail layer of Bitcoin adoption. We make buying Bitcoin as ordinary as buying a phone charger — a decision you can make at a CVS at 9pm on a Tuesday, with the cash in your pocket, without an account, without a wait.
+                  Crypto Dispensers is the retail layer of Bitcoin adoption. We make buying Bitcoin as ordinary as buying a phone charger, a decision you can make at a CVS at 9pm on a Tuesday, with the cash in your pocket, without an account, without a wait.
                 </p>
                 <p className="t-body on-light" style={{ marginBottom: '24px' }}>
-                  BitcoinPOP™ — our Point of Payment system — is the most direct expression of that mission. It connects a person holding cash to Bitcoin in under five minutes at 16,000+ stores nationwide. No bank. No ATM. No friction.
+                  BitcoinPOP™, our Point of Payment system, is the most direct expression of that mission. It connects a person holding cash to Bitcoin in under five minutes at 16,000+ stores nationwide. No bank. No ATM. No friction.
                 </p>
                 <p className="t-body on-light" style={{ marginBottom: '40px' }}>
-                  We also maintain FinCEN registration and SOC 2 Type II certification — because trust is built through accountability, and the people we serve deserve a platform they can trust.
+                  We also maintain FinCEN registration and SOC 2 Type II certification, because trust is built through accountability, and the people we serve deserve a platform they can trust.
                 </p>
                 <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap' }}>
                   <a href="/crypto-dispensers" className="cta dark">
@@ -262,7 +262,7 @@ export default function MissionPage() {
                   color: 'var(--white)',
                 }}
               >
-                — Firas Isa
+               , Firas Isa
               </span>
               <span className="t-label">Founder &amp; CEO, Crypto Dispensers</span>
               <hr className="rule" style={{ flex: 1 }} />

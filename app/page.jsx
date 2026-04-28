@@ -4,7 +4,7 @@ import Footer from '@/components/Footer'
 export const metadata = {
   title: 'Firas Isa | Founder of Crypto Dispensers | Cash to Bitcoin Pioneer',
   description:
-    'Firas Isa founded Crypto Dispensers in 2017 to make Bitcoin accessible to every American — no bank account required. Buy Bitcoin with cash at 16,000+ retail stores nationwide.',
+    'Firas Isa founded Crypto Dispensers in 2017 to make Bitcoin accessible to every American, no bank account required. Buy Bitcoin with cash at 16,000+ retail stores nationwide.',
   alternates: { canonical: 'https://firasisa.com' },
 }
 
@@ -27,7 +27,7 @@ const SERVICES = [
   {
     num: '01',
     name: 'BitcoinPOP™',
-    desc: 'Point of Payment. Deposit cash at 16,000+ retail stores — CVS, Rite Aid, Casey\'s, Office Depot — and receive Bitcoin directly. No ATM, no bank account needed.',
+    desc: 'Point of Payment. Deposit cash at 16,000+ retail stores, CVS, Rite Aid, Casey\'s, Office Depot, and receive Bitcoin directly. No ATM, no bank account needed.',
     href: 'https://www.cryptodispensers.com/bitcoinpop',
     label: 'How it works',
   },
@@ -41,14 +41,14 @@ const SERVICES = [
   {
     num: '03',
     name: 'Debit & Credit',
-    desc: 'Buy Bitcoin instantly with any major debit or credit card — real-time processing, secure, and delivered to your wallet.',
+    desc: 'Buy Bitcoin instantly with any major debit or credit card, real-time processing, secure, and delivered to your wallet.',
     href: 'https://www.cryptodispensers.com/debit-credit',
     label: 'Buy now',
   },
   {
     num: '04',
     name: 'ACH & Wire',
-    desc: 'Link a bank account for ACH or send a wire for high-volume purchases — lower fees, larger limits, institutional-grade access.',
+    desc: 'Link a bank account for ACH or send a wire for high-volume purchases, lower fees, larger limits, institutional-grade access.',
     href: 'https://www.cryptodispensers.com/ach-transfer',
     label: 'Get started',
   },
@@ -59,7 +59,7 @@ const POSTS = [
     tag: 'Founder Story',
     title: 'Why I Built a Bitcoin Company for People Without Bank Accounts',
     excerpt:
-      'Millions of Americans earn cash and want to save. The financial system wasn\'t built for them — Bitcoin was. Here\'s why I built Crypto Dispensers.',
+      'Millions of Americans earn cash and want to save. The financial system wasn\'t built for them, Bitcoin was. Here\'s why I built Crypto Dispensers.',
     date: '2026 · 8 min',
     href: '/writing/why-i-built-crypto-dispensers',
   },
@@ -67,7 +67,7 @@ const POSTS = [
     tag: 'Product',
     title: 'BitcoinPOP: Putting Bitcoin Access Inside Every Neighborhood Store',
     excerpt:
-      'We asked one question: what if buying Bitcoin was as easy as paying a bill at CVS? The answer became BitcoinPOP — our most important innovation.',
+      'We asked one question: what if buying Bitcoin was as easy as paying a bill at CVS? The answer became BitcoinPOP, our most important innovation.',
     date: '2026 · 6 min',
     href: '/writing/bitcoinpop-bitcoin-retail',
   },
@@ -75,7 +75,7 @@ const POSTS = [
     tag: 'Bitcoin',
     title: 'How Everyday Americans Can Use Bitcoin to Fight Inflation',
     excerpt:
-      'Inflation hits hardest when you\'re living paycheck to paycheck. Here\'s why Bitcoin isn\'t speculation for the people I built this for — it\'s protection.',
+      'Inflation hits hardest when you\'re living paycheck to paycheck. Here\'s why Bitcoin isn\'t speculation for the people I built this for, it\'s protection.',
     date: '2025 · 7 min',
     href: '/writing/bitcoin-inflation-hedge',
   },
@@ -103,7 +103,15 @@ export default function HomePage() {
         </div>
 
         <div className="hero-content wrap">
-          <h1 className="hero-name">FIRAS<br />ISA</h1>
+          <h1 className="hero-name">
+            {'FIRAS'.split('').map((ch, i) => (
+              <span key={i} className="hero-letter" style={{ animationDelay: `${i * 40}ms` }}>{ch}</span>
+            ))}
+            <br />
+            {'ISA'.split('').map((ch, i) => (
+              <span key={i} className="hero-letter" style={{ animationDelay: `${(5 + i) * 40}ms` }}>{ch}</span>
+            ))}
+          </h1>
           <div className="hero-bottom">
             <p className="hero-tagline">
               Founder &amp; CEO, Crypto Dispensers<br />
@@ -140,10 +148,10 @@ export default function HomePage() {
             <hr className="rule" style={{ flex: 1 }} />
           </div>
           <div className="about-grid">
-            <div className="about-photo" aria-label="Founder portrait — Firas Isa">
+            <div className="about-photo" aria-label="Founder portrait, Firas Isa">
               <img
                 src="/founder.jpg"
-                alt="Firas Isa — Founder & CEO, Crypto Dispensers"
+                alt="Firas Isa, Founder & CEO, Crypto Dispensers"
                 style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }}
               />
             </div>
@@ -152,17 +160,17 @@ export default function HomePage() {
                 className="about-quote"
                 cite="https://www.cryptodispensers.com/crypto-dispensers-founder-letter-from-firas-isa-ceo"
               >
-                "I wanted to build a company for Americans who work hard, who try to save, who want to own something that holds its value — and who deserve more than a lifetime of payments and obligations with nothing to pass on."
+                "I wanted to build a company for Americans who work hard, who try to save, who want to own something that holds its value, and who deserve more than a lifetime of payments and obligations with nothing to pass on."
               </blockquote>
               <p className="t-body" style={{ marginBottom: '24px' }}>
                 Firas Isa is a Chicago-based entrepreneur and the founder of{' '}
                 <a href="https://www.cryptodispensers.com" style={{ color: 'var(--orange)', opacity: 1 }}>
                   Crypto Dispensers
                 </a>
-                — a platform he launched in September 2017 with a single Bitcoin ATM at Woodfield Mall. Today, Crypto Dispensers serves over one million users across 159 countries, with cash-to-Bitcoin access at 16,000+ retail locations nationwide.
+               , a platform he launched in September 2017 with a single Bitcoin ATM at Woodfield Mall. Today, Crypto Dispensers serves over one million users across 159 countries, with cash-to-Bitcoin access at 16,000+ retail locations nationwide.
               </p>
               <p className="t-body" style={{ marginBottom: '44px' }}>
-                He didn't build it for traders or tech insiders. He built it for the truck driver, the small business owner, the freelancer — the people the banking system overlooks. His signature innovation, BitcoinPOP™, lets anyone buy Bitcoin with cash at a neighborhood store. No bank account. No ATM. No barriers.
+                He didn't build it for traders or tech insiders. He built it for the truck driver, the small business owner, the freelancer, the people the banking system overlooks. His signature innovation, BitcoinPOP™, lets anyone buy Bitcoin with cash at a neighborhood store. No bank account. No ATM. No barriers.
               </p>
               <a href="/about" className="cta">
                 Full story <span className="cta-arrow">→</span>
@@ -190,7 +198,7 @@ export default function HomePage() {
                 <span className="badge">159 Countries</span>
               </div>
               <p className="t-body on-light" style={{ textAlign: 'right', fontSize: '15px', maxWidth: '320px' }}>
-                A full-scale fintech platform making it simple and safe to buy Bitcoin anywhere in the U.S. — with cash, card, ACH, or wire transfer.
+                A full-scale fintech platform making it simple and safe to buy Bitcoin anywhere in the U.S., with cash, card, ACH, or wire transfer.
               </p>
             </div>
           </div>
@@ -257,7 +265,7 @@ export default function HomePage() {
                 color: 'rgba(0,0,0,0.65)',
                 marginBottom: '8px',
               }}>
-                BitcoinPOP is Crypto Dispensers' most important innovation — turning everyday retail stores into instant Bitcoin access points for the 60 million Americans who handle cash and deserve access to the digital economy. Walk in, deposit cash, get Bitcoin. Done.
+                BitcoinPOP is Crypto Dispensers' most important innovation, turning everyday retail stores into instant Bitcoin access points for the 60 million Americans who handle cash and deserve access to the digital economy. Walk in, deposit cash, get Bitcoin. Done.
               </p>
               <div className="store-tags">
                 {STORES.map((s) => (
@@ -270,7 +278,7 @@ export default function HomePage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Try BitcoinPOP — Buy Bitcoin with cash <span className="cta-arrow">→</span>
+                Try BitcoinPOP, Buy Bitcoin with cash <span className="cta-arrow">→</span>
               </a>
             </div>
           </div>

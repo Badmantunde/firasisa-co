@@ -4,22 +4,22 @@ import Footer from '@/components/Footer'
 export const metadata = {
   title: 'About Firas Isa | Crypto Dispensers Founder | Chicago Bitcoin Entrepreneur',
   description:
-    'Meet Firas Isa — the Chicago entrepreneur who built Crypto Dispensers from a single Bitcoin ATM into a global cash-to-Bitcoin network serving 1M+ users across 159 countries.',
+    'Meet Firas Isa, the Chicago entrepreneur who built Crypto Dispensers from a single Bitcoin ATM into a global cash-to-Bitcoin network serving 1M+ users across 159 countries.',
   alternates: { canonical: 'https://firasisa.com/about' },
 }
 
 const TIMELINE = [
   {
     year: '2017',
-    event: '<strong>Founded Crypto Dispensers.</strong> Launched the first Bitcoin ATM at Woodfield Mall in Schaumburg, IL — the largest mall in Illinois. September 12, 2017.',
+    event: '<strong>Founded Crypto Dispensers.</strong> Launched the first Bitcoin ATM at Woodfield Mall in Schaumburg, IL, the largest mall in Illinois. September 12, 2017.',
   },
   {
     year: '2018–19',
-    event: '<strong>Mall network expansion.</strong> Deployed Bitcoin ATM kiosks across Simon, Brookfield, and Tanger Properties — major retail destinations across the Midwest.',
+    event: '<strong>Mall network expansion.</strong> Deployed Bitcoin ATM kiosks across Simon, Brookfield, and Tanger Properties, major retail destinations across the Midwest.',
   },
   {
     year: '2020',
-    event: '<strong>Invented BitcoinPOP™.</strong> Built the Point of Payment system that turned 16,000+ retail locations — CVS, Rite Aid, and more — into instant cash-to-Bitcoin access points.',
+    event: '<strong>Invented BitcoinPOP™.</strong> Built the Point of Payment system that turned 16,000+ retail locations, CVS, Rite Aid, and more, into instant cash-to-Bitcoin access points.',
   },
   {
     year: '2021–23',
@@ -38,7 +38,7 @@ const TIMELINE = [
 const BELIEFS = [
   {
     title: 'Financial freedom is a right, not a privilege.',
-    body: 'The people who need wealth preservation most are the same people the financial system makes it hardest for. Bitcoin changes that equation — if you can access it.',
+    body: 'The people who need wealth preservation most are the same people the financial system makes it hardest for. Bitcoin changes that equation, if you can access it.',
   },
   {
     title: 'Execution beats theory.',
@@ -50,7 +50,7 @@ const BELIEFS = [
   },
   {
     title: 'Trust is built through compliance.',
-    body: 'Crypto has a reputation problem. Crypto Dispensers holds FinCEN registration and SOC 2 Type II certification because trust has to be earned — not assumed.',
+    body: 'Crypto has a reputation problem. Crypto Dispensers holds FinCEN registration and SOC 2 Type II certification because trust has to be earned, not assumed.',
   },
   {
     title: 'Build for the next generation.',
@@ -89,7 +89,7 @@ export default function AboutPage() {
                 <div className="about-photo" aria-label="Firas Isa, Founder" style={{ marginBottom: '32px' }}>
                   <img
                     src="/founder.jpg"
-                    alt="Firas Isa — Founder & CEO, Crypto Dispensers, Chicago"
+                    alt="Firas Isa, Founder & CEO, Crypto Dispensers, Chicago"
                     style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }}
                   />
                 </div>
@@ -112,15 +112,15 @@ export default function AboutPage() {
 
               <div>
                 <blockquote className="about-quote" style={{ marginBottom: '36px' }}>
-                  "I wanted to build a company for Americans who work hard, who try to save, who want to own something that holds its value — and who deserve more than a lifetime of payments, interest, and obligations with nothing to pass on."
+                  "I wanted to build a company for Americans who work hard, who try to save, who want to own something that holds its value, and who deserve more than a lifetime of payments, interest, and obligations with nothing to pass on."
                 </blockquote>
 
                 <p className="t-body" style={{ marginBottom: '24px' }}>
-                  Firas Isa grew up understanding what it meant to work for every dollar. He watched people around him earn cash — real, physical cash — and struggle to do anything meaningful with it. Banks that didn't want them. Savings accounts that couldn't keep up with inflation. A financial system designed, at its core, for people who already had assets.
+                  Firas Isa grew up understanding what it meant to work for every dollar. He watched people around him earn cash, real, physical cash, and struggle to do anything meaningful with it. Banks that didn't want them. Savings accounts that couldn't keep up with inflation. A financial system designed, at its core, for people who already had assets.
                 </p>
 
                 <p className="t-body" style={{ marginBottom: '24px' }}>
-                  In 2017, he installed a single Bitcoin ATM at Woodfield Mall in Schaumburg, Illinois. Not because Bitcoin was trendy — it wasn't, not yet. But because he could see what it was: a savings tool that didn't require a credit score, a bank account, or anyone's permission to use.
+                  In 2017, he installed a single Bitcoin ATM at Woodfield Mall in Schaumburg, Illinois. Not because Bitcoin was trendy, it wasn't, not yet. But because he could see what it was: a savings tool that didn't require a credit score, a bank account, or anyone's permission to use.
                 </p>
 
                 <p className="t-body">
@@ -193,7 +193,7 @@ export default function AboutPage() {
                 FIVE PRINCIPLES<br />THAT DRIVE<br />THE WORK.
               </h2>
               <p className="t-body" style={{ paddingTop: '8px' }}>
-                Firas doesn't talk in frameworks. He talks in decisions — the ones he made at 3 AM when the company had one machine and no roadmap. These are the beliefs that came out of those decisions.
+                Firas doesn't talk in frameworks. He talks in decisions, the ones he made at 3 AM when the company had one machine and no roadmap. These are the beliefs that came out of those decisions.
               </p>
             </div>
 
@@ -229,7 +229,7 @@ export default function AboutPage() {
               </h2>
               <div>
                 <p className="t-body on-light" style={{ marginBottom: '36px' }}>
-                  In his own words — why Firas built Crypto Dispensers, who he built it for, and where he intends to take it. Written from Chicago. Unfiltered.
+                  In his own words, why Firas built Crypto Dispensers, who he built it for, and where he intends to take it. Written from Chicago. Unfiltered.
                 </p>
                 <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap' }}>
                   <a
