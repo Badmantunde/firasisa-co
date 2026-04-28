@@ -1098,6 +1098,12 @@ a:hover { opacity: 0.6; }
   min-width: 0;
 }
 
+/* scale title to fit the shared column — "DISPENSERS" is ~6.1em wide at this tracking */
+.cd-hero-text .page-title {
+  font-size: clamp(36px, 8vw, 112px);
+  white-space: nowrap;
+}
+
 /* stack on tablet and below */
 @media (max-width: 768px) {
   .cd-hero-inner {
