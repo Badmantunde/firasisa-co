@@ -2,10 +2,23 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 
 export const metadata = {
-  title: 'About Firas Isa | Crypto Dispensers Founder | Chicago Bitcoin Entrepreneur',
+  title: 'About Firas Isa | Crypto Dispensers Founder',
   description:
-    'Meet Firas Isa, the Chicago entrepreneur who built Crypto Dispensers from a single Bitcoin ATM into a global cash-to-Bitcoin network serving 1M+ users across 159 countries.',
+    'Meet Firas Isa — the Chicago entrepreneur who started with one Bitcoin ATM at a mall and built Crypto Dispensers into a global cash-to-Bitcoin network serving 1M+ users across 159 countries.',
   alternates: { canonical: 'https://firasisa.com/about' },
+  openGraph: {
+    title: 'About Firas Isa | Crypto Dispensers Founder',
+    description:
+      'From one Bitcoin ATM at Woodfield Mall in 2017 to 16,000+ retail locations worldwide. This is the story of Firas Isa and Crypto Dispensers.',
+    url: 'https://firasisa.com/about',
+    images: [{ url: '/thumbnail.png', width: 3274, height: 1684, alt: 'Firas Isa — Founder & CEO, Crypto Dispensers' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Firas Isa | Crypto Dispensers Founder',
+    description: 'From one Bitcoin ATM at Woodfield Mall to 16,000+ retail locations. The story of Firas Isa and Crypto Dispensers.',
+    images: ['/thumbnail.png'],
+  },
 }
 
 const TIMELINE = [

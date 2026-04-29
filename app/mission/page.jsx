@@ -2,10 +2,23 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 
 export const metadata = {
-  title: 'The Mission | Firas Isa | Bitcoin Financial Freedom',
+  title: 'The Mission | Financial Freedom Is Not a Luxury',
   description:
-    'Firas Isa built Crypto Dispensers on one conviction: financial freedom is not a luxury. Learn why Bitcoin accessibility matters and how Crypto Dispensers is closing the gap.',
+    'Firas Isa built Crypto Dispensers on one conviction: financial freedom is not a luxury — it belongs to everyone. Learn why Bitcoin accessibility matters and how Crypto Dispensers is closing the gap.',
   alternates: { canonical: 'https://firasisa.com/mission' },
+  openGraph: {
+    title: 'Financial Freedom Is Not a Luxury — The Mission of Firas Isa',
+    description:
+      'Millions of Americans earn cash and deserve access to Bitcoin. Firas Isa built Crypto Dispensers to close that gap — 16,000+ retail locations, no bank account required.',
+    url: 'https://firasisa.com/mission',
+    images: [{ url: '/thumbnail.png', width: 3274, height: 1684, alt: 'Firas Isa — Founder & CEO, Crypto Dispensers' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Financial Freedom Is Not a Luxury',
+    description: 'Firas Isa built Crypto Dispensers so anyone can buy Bitcoin with cash — no bank account, no barriers.',
+    images: ['/thumbnail.png'],
+  },
 }
 
 const PROBLEMS = [

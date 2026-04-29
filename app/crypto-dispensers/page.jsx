@@ -2,10 +2,23 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 
 export const metadata = {
-  title: 'Crypto Dispensers | Buy Bitcoin with Cash, Card & More | Firas Isa\'s Company',
+  title: 'Crypto Dispensers | Buy Bitcoin with Cash at 16,000+ Stores',
   description:
-    'Crypto Dispensers, founded by Firas Isa in 2017, lets you buy Bitcoin at 16,000+ retail stores with cash, or online with debit, credit, ACH, or wire. FinCEN registered. SOC 2 certified.',
+    'Crypto Dispensers, founded by Firas Isa in 2017, lets you buy Bitcoin with cash at CVS, Rite Aid and 16,000+ stores — or online via debit, credit, ACH or wire. FinCEN registered. SOC 2 certified.',
   alternates: { canonical: 'https://firasisa.com/crypto-dispensers' },
+  openGraph: {
+    title: 'Crypto Dispensers | Buy Bitcoin with Cash — No Bank Account Needed',
+    description:
+      'Walk into CVS, Rite Aid or 16,000+ other stores. Pay cash. Get Bitcoin. Founded by Firas Isa in 2017. Serving 1M+ users in 159 countries. FinCEN registered. SOC 2 certified.',
+    url: 'https://firasisa.com/crypto-dispensers',
+    images: [{ url: '/thumbnail.png', width: 3274, height: 1684, alt: 'Crypto Dispensers — Buy Bitcoin with Cash' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Crypto Dispensers | Buy Bitcoin with Cash at 16,000+ Stores',
+    description: 'Walk in with cash. Leave with Bitcoin. No bank account needed. Founded by Firas Isa — serving 1M+ users in 159 countries.',
+    images: ['/thumbnail.png'],
+  },
 }
 
 const faqSchema = {

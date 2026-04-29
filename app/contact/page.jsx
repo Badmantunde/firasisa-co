@@ -2,10 +2,22 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 
 export const metadata = {
-  title: 'Contact Firas Isa | Founder, Crypto Dispensers | Chicago',
+  title: 'Contact Firas Isa | Speaking, Media & Partnerships',
   description:
-    'Connect with Firas Isa, founder and CEO of Crypto Dispensers. For speaking inquiries, media, partnerships, or general questions.',
+    'Connect with Firas Isa, founder and CEO of Crypto Dispensers. Available for speaking engagements, media appearances, and partnership inquiries.',
   alternates: { canonical: 'https://firasisa.com/contact' },
+  openGraph: {
+    title: 'Contact Firas Isa | Founder of Crypto Dispensers',
+    description: 'Connect with Firas Isa for speaking engagements, media appearances, and partnership inquiries.',
+    url: 'https://firasisa.com/contact',
+    images: [{ url: '/thumbnail.png', width: 3274, height: 1684, alt: 'Firas Isa — Founder & CEO, Crypto Dispensers' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact Firas Isa | Founder of Crypto Dispensers',
+    description: 'Connect with Firas Isa for speaking, media, and partnerships.',
+    images: ['/thumbnail.png'],
+  },
 }
 
 const CONTACT_INFO = [

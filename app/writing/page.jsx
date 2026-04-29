@@ -4,10 +4,22 @@ import WritingClient from './WritingClient'
 import { ARTICLES } from '@/lib/articles'
 
 export const metadata = {
-  title: 'Writing | Firas Isa | Bitcoin, Fintech & Entrepreneurship',
+  title: 'Writing | Bitcoin, Fintech & Entrepreneurship',
   description:
     'Thoughts from Firas Isa on Bitcoin adoption, financial inclusion, building Crypto Dispensers, and the future of cash-to-crypto access for everyday Americans.',
   alternates: { canonical: 'https://firasisa.com/writing' },
+  openGraph: {
+    title: 'Writing by Firas Isa | Bitcoin, Fintech & Entrepreneurship',
+    description: 'Unfiltered thoughts on Bitcoin adoption, the unbanked economy, and what it takes to build a fintech company from scratch.',
+    url: 'https://firasisa.com/writing',
+    images: [{ url: '/thumbnail.png', width: 3274, height: 1684, alt: 'Firas Isa — Writing on Bitcoin and Fintech' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Writing by Firas Isa | Bitcoin & Fintech',
+    description: 'Unfiltered thoughts on Bitcoin adoption, the unbanked economy, and building a fintech company from scratch.',
+    images: ['/thumbnail.png'],
+  },
 }
 
 const serializable = ARTICLES.map(({ Content: _c, ...rest }) => rest)
